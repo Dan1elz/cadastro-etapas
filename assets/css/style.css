@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    /* height: 100vh; */
+    overflow:hidden;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+
+}
+.container__translate{
+    width: 100%;
+    height: 100%;
+    transition: 500ms;
+}
+

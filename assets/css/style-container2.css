@@ -1,0 +1,109 @@
+.container__2{
+    display: none;
+    position: relative;
+    justify-content: center;
+    padding-top: 5rem;
+    width: 100%;
+    height: calc(100vh);
+    background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 100%);
+}
+.container__formulario2{
+    display: flex;
+    max-width: 700px;
+    min-width: 100%;
+    background-color: var(--cor-card);
+    padding: 15px 25px;
+    border-radius: 2px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+.form-end{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detalhes__end{
+    display: block;
+    margin: 10px 0 3px 5px;
+    font-weight: 500;    
+}
+.form-control-end{
+    font-size: 15px;
+    width: 100%;
+    height: 2.2rem;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px ;
+    color: var(--cor-font);
+    transition: 200ms;
+}
+.form-control-end:hover::placeholder, .form-control-end:hover{
+    color: #e9e5e5;
+    border-color: #e9e5e5;
+}
+.form-control-end:valid,
+.form-control-end:focus{
+    color: var(--cor-font);
+    border-color:var(--input);
+}
+.invalid:valid{ border-color: var(--cor-input);}
+.invalid:focus{ border-color: var(--input);}
+.form-control-end::placeholder{
+    color: #a3a3a3;
+    transition: 200ms;
+}
+.input__box__end{
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 5px;
+}
+.cep{   width: 100%}
+
+[data-load]{
+    opacity: 0;
+    display: flex;
+    font-size: 30px;
+    color: var(--input);
+    animation: spin 1s infinite linear;
+}
+.form-end div:first-child{
+    display: flex;
+    align-items: center;
+    width: 10rem;
+}
+[data-cepalert]{
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: rgb(218, 13, 13);
+    overflow: visible;
+}
+.carregando{
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.input__box__end div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 510px) {
+    .container__formulario2{  max-width: 100%;}
+    .input__box__end{    width: 100%;}
+    .container__2{  padding-top: 0;}
+}
